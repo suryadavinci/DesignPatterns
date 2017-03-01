@@ -7,7 +7,9 @@ public class Routes {
 	String to;
 	int distance;
 	
-	Routes(String name,String from, String to, int distance) throws Exception{
+	
+	
+	Routes(String name,String from, String to, int distance, Trains express) throws Exception{
 		if(distance<0){
 			throw new Exception("NegativeDistanceException");
 		}
@@ -17,6 +19,9 @@ public class Routes {
 		this.to = to;
 		this.distance = distance;
 	}
+	
+	
+	
 	
 	
 }

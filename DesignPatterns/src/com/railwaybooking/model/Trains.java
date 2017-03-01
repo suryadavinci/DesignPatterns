@@ -2,7 +2,7 @@ package com.railwaybooking.model;
 
 
 
-public class Booking {
+public class Trains {
 
 	Class sleeper;
 	Class ac;

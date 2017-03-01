@@ -1,8 +1,8 @@
 package com.railwaybooking.model;
 
-public class MumbaiExpressBooking extends Booking {
+public class MumbaiExpress extends Trains {
 
-	public static MumbaiExpressBooking cXB= new MumbaiExpressBooking();
+	public static MumbaiExpress cXB= new MumbaiExpress();
 
 	{
 		general = new Class(100);
