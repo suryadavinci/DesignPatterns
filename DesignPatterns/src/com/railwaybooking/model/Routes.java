@@ -50,7 +50,6 @@ public class Routes {
 		this.distance = distance;
 		
 		String routeString=from.getShortName()+"TO"+to.getShortName();
-		System.out.println("putting route "+routeString);
 		
 		availableRoutes.put(routeString,this);
 		
