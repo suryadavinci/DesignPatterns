@@ -8,7 +8,7 @@ public class Trains {
 	Class ac;
 	Class general;
 
-	
+	String name;
 	
 	Routes[] operatingRoutes;
 	
@@ -22,6 +22,11 @@ public class Trains {
 	
 	public Class getGeneral(){
 		return general;
+	}
+	
+	public String toString() {
+		// TODO Auto-generated method stub
+		return this.name;
 	}
 	
 	
