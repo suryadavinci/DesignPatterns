@@ -1,15 +1,18 @@
 package com.railwaybooking.model;
 
+import java.util.HashMap;
+import java.util.LinkedList;
+
 public class Routes {
 	
 	String name;
-	String from;
-	String to;
+	Location from;
+	Location to;
 	int distance;
 	
+	static HashMap<String,LinkedList<Trains>> availableRoutes = new HashMap<String,LinkedList<Trains>> ();
 	
-	
-	Routes(String name,String from, String to, int distance, Trains express) throws Exception{
+	Routes(String name,Location from, Location to, int distance, Trains express) throws Exception{
 		if(distance<0){
 			throw new Exception("NegativeDistanceException");
 		}
@@ -18,6 +21,9 @@ public class Routes {
 		this.from = from;
 		this.to = to;
 		this.distance = distance;
+		
+		
+		
 	}
 	
 	
