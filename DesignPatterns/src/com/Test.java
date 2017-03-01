@@ -30,7 +30,7 @@ public class Test {
 		
 		System.out.println(route);
 		
-		System.out.println(Routes.getRoute(route));
+		System.out.println(Routes.getRoute(route).getTrain());
 		
 		
 	}

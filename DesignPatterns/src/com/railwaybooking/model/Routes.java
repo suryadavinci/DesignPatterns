@@ -66,7 +66,9 @@ public class Routes {
 	}
 	
 	
-	
+	public Trains getTrain(){
+		return this.train;
+	}
 	
 	
 }
