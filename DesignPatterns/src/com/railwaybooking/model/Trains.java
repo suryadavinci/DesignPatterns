@@ -30,11 +30,14 @@ public class Trains {
 	}
 	
 	public void printDetails(){
+		System.out.println("=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=");
 		System.out.println(this.name);
-		System.out.println("Class\t\tTotalSeats\tBookedSeats");
-		System.out.println("General\t\t"+this.general.getTotalSeats()+"\t"+this.general.getBookedSeats());
-		System.out.println("Sleeper\t\t"+this.sleeper.getTotalSeats()+"\t"+this.sleeper.getBookedSeats());
-		System.out.println("AC\t\t\t"+this.ac.getTotalSeats()+"\t"+this.ac.getBookedSeats());
+		System.out.println("-------------------------------------------------");
+		System.out.println("Class\t\t| TotalSeats\t| AvailableSeats \t|");
+		System.out.println("-------------------------------------------------");
+		System.out.println("General\t\t| "+this.general.getTotalSeats()+"\t\t| "+(this.general.getTotalSeats()- this.general.getBookedSeats())+"\t\t|");
+		System.out.println("Sleeper\t\t| "+this.sleeper.getTotalSeats()+"\t\t| "+(this.sleeper.getTotalSeats()- this.sleeper.getBookedSeats())+"\t\t|");
+		System.out.println("AC\t\t| "+this.ac.getTotalSeats()+"\t\t| "+(this.ac.getTotalSeats()- this.ac.getBookedSeats())+"\t\t|");
 	}
 	
 }

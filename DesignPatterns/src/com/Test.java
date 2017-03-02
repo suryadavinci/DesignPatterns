@@ -10,12 +10,13 @@ import com.railwaybooking.model.ChennaiExpress;
 
 public class Test {
 
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) {
 
 		Routes.enterRoutes();
 
 		Scanner s = new Scanner(System.in);
 
+		while(true){
 		System.out.println("Available Destinations : \n");
 		ArrayList<Location> l = Location.availableLocations;
 		for (int i = 0; i < l.size(); i++) {
@@ -34,14 +35,41 @@ public class Test {
 
 
 		Routes r = Routes.getRoute(route);
-		if(r!=null)
-		{
-			System.out.println("Available Trains "+r.getTrains());
-			printDetails(r.getTrains());
+
+		System.out.println(r.getTrains());
+		
+		System.out.println("Select a Train ");
+		int selectedTrain=s.nextInt();
+		
+		
+		Trains t=r.getTrains().get(selectedTrain);
+		
+		t.printDetails();
+		
+		System.out.println("Enter Class and Seats : ");
+		String c=s.next();
+		int seats=s.nextInt();
+		
+		try{
+		if(c.equalsIgnoreCase("s")){
+			t.getSleeper().setBookedSeats(seats);
+		}
+		else if(c.equalsIgnoreCase("a")){
+			t.getAC().setBookedSeats(seats);
+		}
+		else if(c.equalsIgnoreCase("g")){
+			t.getGeneral().setBookedSeats(seats);
+		}
+		System.out.println("Tickets Booked");
+		}catch(Exception e){
+			System.out.println("Required seats exceeds available seats");
 		}
 		
 		
-
+		t.printDetails();
+		
+		}
+		
 	}
 	
 	

@@ -67,7 +67,9 @@ public class Routes {
 
 	public void addTrains(Trains train) {
 		if(this.trains.contains(train))
+			{System.out.println("already "+train+" is there");
 			return ;
+			}
 		this.trains.add(train);
 	}
 
@@ -93,6 +95,7 @@ public class Routes {
 
 			train = MumbaiExpress.mXB;
 			if (Routes.getRoute("CHNTOMUM") != null) {
+				System.out.println("adding "+train);
 				Routes.getRoute("CHNTOMUM").addTrains(train);
 			} else {
 				new Routes("CHNTOMUM", from, to, 472, train);
