@@ -9,7 +9,7 @@ public class MumbaiExpress extends Trains {
 		general = new Class(100);
 		sleeper = new Class(80);
 		ac= new Class(40);
-		this.name="ChennaiExpress";
+		this.name="MumbaiExpress";
 
 	}
 	
