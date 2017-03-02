@@ -34,13 +34,22 @@ public class Test {
 
 
 		Routes r = Routes.getRoute(route);
-		System.out.println("Available Trains "+r.getTrains());
+		if(r!=null)
+		{
+			System.out.println("Available Trains "+r.getTrains());
+			printDetails(r.getTrains());
+		}
+		
+		
 
-		
-		
-		
 	}
 	
+	
+	public static void printDetails(ArrayList<Trains> h){
+		for(int i=0;i<h.size();i++)
+			h.get(i).printDetails();
+		System.out.println();
+	}
 	
 	
 

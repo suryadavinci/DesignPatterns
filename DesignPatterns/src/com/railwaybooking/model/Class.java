@@ -13,6 +13,10 @@ public class Class{
 	}
 	
 	
+	public int getTotalSeats(){
+		return this.totalSeats;
+	}
+	
 	public int getBookedSeats(){
 		return this.bookedSeats;
 	}

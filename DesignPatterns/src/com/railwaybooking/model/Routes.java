@@ -12,7 +12,7 @@ public class Routes {
 	Location from;
 	Location to;
 	int distance;
-	HashSet<Trains> trains = new HashSet<Trains>();
+	ArrayList<Trains> trains = new ArrayList<Trains>();
 	private static HashMap<String, Routes> availableRoutes = new HashMap<String, Routes>();
 
 	// static HashMap<Routes,LinkedList<Trains>> availableExpRoutes = new
@@ -51,15 +51,23 @@ public class Routes {
 	}
 
 	public static Routes getRoute(String routeString) {
+		
+		if(availableRoutes.get(routeString)!=null)		
 		return availableRoutes.get(routeString);
+		else{
+			//System.out.println("No Trains available in this routes");
+			return null;
+		}
 
 	}
 
-	public HashSet<Trains> getTrains() {
+	public ArrayList<Trains> getTrains() {
 		return this.trains;
 	}
 
 	public void addTrains(Trains train) {
+		if(this.trains.contains(train))
+			return ;
 		this.trains.add(train);
 	}
 
