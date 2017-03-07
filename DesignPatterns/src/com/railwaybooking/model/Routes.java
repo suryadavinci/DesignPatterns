@@ -33,8 +33,7 @@ public class Routes {
 	 * }
 	 */
 
-	Routes(String name, Location from, Location to, int distance, Trains express)
-			throws Exception {
+	Routes(String name, Location from, Location to, int distance, Trains express) throws Exception {
 		if (distance < 0) {
 			throw new Exception("NegativeDistanceException");
 		}
@@ -51,11 +50,11 @@ public class Routes {
 	}
 
 	public static Routes getRoute(String routeString) {
-		
-		if(availableRoutes.get(routeString)!=null)		
-		return availableRoutes.get(routeString);
-		else{
-			//System.out.println("No Trains available in this routes");
+
+		if (availableRoutes.get(routeString) != null)
+			return availableRoutes.get(routeString);
+		else {
+			// System.out.println("No Trains available in this routes");
 			return null;
 		}
 
@@ -66,10 +65,10 @@ public class Routes {
 	}
 
 	public void addTrains(Trains train) {
-		if(this.trains.contains(train))
-			{System.out.println("already "+train+" is there");
-			return ;
-			}
+		if (this.trains.contains(train)) {
+			System.out.println("already " + train + " is there");
+			return;
+		}
 		this.trains.add(train);
 	}
 
@@ -95,7 +94,7 @@ public class Routes {
 
 			train = MumbaiExpress.mXB;
 			if (Routes.getRoute("CHNTOMUM") != null) {
-				System.out.println("adding "+train);
+				System.out.println("adding " + train);
 				Routes.getRoute("CHNTOMUM").addTrains(train);
 			} else {
 				new Routes("CHNTOMUM", from, to, 472, train);
