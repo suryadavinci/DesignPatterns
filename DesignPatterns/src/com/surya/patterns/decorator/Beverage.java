@@ -2,5 +2,9 @@ package com.surya.patterns.decorator;
 
 public abstract class Beverage {
 
-	public abstract void cost();
+	String description="No Description";
+	public abstract double cost();
+	public String getDescription(){
+		return this.description;
+	}
 }
